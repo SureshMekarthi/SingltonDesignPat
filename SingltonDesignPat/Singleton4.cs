@@ -9,11 +9,12 @@ namespace SingltonDesignPat
 {
     internal class Singleton4
     {
-        private static Lazy<Singleton4> _instance = new Lazy<Singleton4>(()=>new Singleton4());
+        private static readonly Lazy<Singleton4> _instance = new Lazy<Singleton4>(()=>new Singleton4());
 
         private Singleton4() { }
 
-        public static Singleton4 Instance => _instance.Value;
+        public static Singleton4 Instance =>_instance.Value;
+        
 
     }
 
